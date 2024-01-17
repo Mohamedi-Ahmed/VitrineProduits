@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: '18.x'
           
-      - name: Change directory to FrontEnd
+      - name: Change directory to frontend
         run: |
           ls
-          cd FrontEnd
+          cd frontend
           pwd # to print the current working directory
 
       - name: npm install, build, and test
@@ -32,13 +32,13 @@ jobs:
           npm install
           npx ng build --output-path=dist/ --configuration production
           ls dist/ # or `dir dist\` on Windows
-        working-directory: ./FrontEnd
+        working-directory: ./frontend
 
       - name: Upload dist folder as artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: FrontEnd/dist/ # Adjusted path
+          path: frontend/dist/ # Adjusted path
 
   deploy:
     runs-on: ubuntu-latest
