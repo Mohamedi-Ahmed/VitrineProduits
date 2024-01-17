@@ -27,7 +27,6 @@ namespace backend.Controllers
         {
             return _context.Products.ToList();
         }
-
         // GET: api/product/{id}
         [HttpGet("{id}")]
         public ActionResult<Product> GetProduct(int id)

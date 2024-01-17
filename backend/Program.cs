@@ -1,7 +1,14 @@
 using backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Ajoutez cette ligne pour récupérer la configuration Azure Storage
+var azureStorageConfig = builder.Configuration.GetSection("AzureStorageConfig").Get<AzureStorageConfig>() ?? throw new InvalidOperationException("Azure storage configuration is missing in appsettings.json");
+
+// Enregistrer azureStorageConfig pour une utilisation dans toute l'application
+builder.Services.AddSingleton(azureStorageConfig);
 
 // Add services to the container.
 builder.Services.AddControllers();

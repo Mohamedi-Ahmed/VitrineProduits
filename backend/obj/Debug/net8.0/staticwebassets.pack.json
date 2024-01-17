@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\ib\\Desktop\\VitrineProduits\\backend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\backend.bundle.scp.css",
-      "PackagePath": "staticwebassets\\backend.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\ib\\Desktop\\VitrineProduits\\backend\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
