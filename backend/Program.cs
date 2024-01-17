@@ -1,3 +1,4 @@
+//dotnet ef dbcontext scaffold "Data Source=./database/products_database.db" Microsoft.EntityFrameworkCore.Sqlite --output-dir Models
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
