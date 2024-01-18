@@ -26,7 +26,6 @@ jobs:
         run: |
           ls
           cd backend
-          pwd # to print the current working directory
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
