@@ -25,7 +25,7 @@ jobs:
         run: |
           ls
           cd frontend
-          pwd # to print the current working directory
+          pwd
 
       - name: npm install, build, and test
         run: |
@@ -57,10 +57,10 @@ jobs:
         run: ls -R ./ # List everything in the current directory
       
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
           app-name: 'projetvitrineproduitsAM'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6CE9C98472B94AE581090E8315B5BD88 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_49984EB3D5E1446191954FD43729D0F2 }}
