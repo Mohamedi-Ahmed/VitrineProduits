@@ -1,0 +1,38 @@
+.product-img {
+  width: 400px;  /* ou toute autre taille fixe */
+  height: 500px; /* ou toute autre taille fixe */
+}
+.original-price {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.discounted-price {
+  color: red;
+  font-weight: bold;
+}
+
+.discount-percentage {
+  color: green;
+  font-weight: bold;
+}
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-details {
+  flex: 1;
+  text-align: center;
+  margin-top: 10%; /* Ajustez selon vos besoins */
+}
+.product-img {
+  width: 400px; /* La largeur maximale sera celle du conteneur parent */
+  height: 400px; /* La hauteur s'ajustera proportionnellement à la largeur */
+  border: 1px solid #ddd; /* Bordure de 1px solide avec une couleur de base */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+  margin-top: 50px; /* Ajustez selon vos besoins */
+
+}

@@ -1,42 +1,94 @@
-.product-gallery {
+/* Styles pour le dashboard */
+.dashboard {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  width: 98vw; /* Assurez-vous que le dashboard occupe toute la largeur */
+  background-color: #333;
+  color: white;
+  padding: 10px;
 }
 
-.main-product {
+.dashboard-tab {
+  flex: 1;
   text-align: center;
-  margin: 0 20px;
 }
 
-.main-product img {
-  max-width: 300px;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* Styles pour le bouton */
+.buy-button-container {
+  text-align: center;
+  position: absolute; /* Position absolue pour placer le bouton */
+  top: 50%; /* Réglez la position verticale du bouton (dans le dernier tiers) */
+  right: 20px; /* Réglez la position horizontale du bouton (à droite) */
+  transform: translateY(-50%); /* Centre le bouton verticalement */
 }
 
-.product-info h2 {
-  margin: 10px 0 5px;
-}
-
-.product-info p {
-  color: #555;
+/* Styles pour les flèches */
+.center-content {
+  position: relative; /* Position relative pour contenir les flèches */
 }
 
 .arrow {
   font-size: 24px;
   cursor: pointer;
-}
-
-.left-arrow, .right-arrow {
-  user-select: none;
+  position: absolute; /* Position absolue pour les flèches */
+  top: 50%; /* Centre les flèches verticalement par rapport à l'image */
 }
 
 .left-arrow {
-  margin-right: 10px;
+  left: 30%; /* Positionne la flèche gauche à 10px à gauche de l'image */
 }
 
 .right-arrow {
-  margin-left: 10px;
+  right: 30%; /* Positionne la flèche droite à 10px à droite de l'image */
+}
+
+/* Vos styles existants pour le bouton restent inchangés */
+.buy-button {
+  background-color: #ff4500;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #e63900;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles pour le filtre */
+.filter-container {
+  position: absolute;
+  top: 11%; /* Position verticale au milieu de la page */
+  left: 10px; /* Position horizontale à 20px de la gauche */
+  transform: translateY(-50%); /* Centre le filtre verticalement */
+  z-index: 1; /* Pour s'assurer qu'il est au-dessus du contenu */
+}
+
+/* Styles pour la datalist */
+#categories {
+  margin-bottom: 10px; /* Ajoute un espace en bas de la datalist */
+}
+
+/* Styles pour le bouton Appliquer le filtre */
+.apply-filter-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.apply-filter-button:hover {
+  background-color: #0056b3;
 }

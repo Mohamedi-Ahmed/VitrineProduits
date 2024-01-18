@@ -9,26 +9,24 @@ import { FormsModule } from "@angular/forms";
     standalone: true,
     imports: [CommonModule, FormsModule],
     templateUrl: "./product.component.html",
-    styleUrl: "./product.component.css",
+    styleUrls: ["./product.component.css"],
 })
 export class ProductComponent implements OnInit {
+    @Input()
     @Input() currentIndex!: number; // Input to receive current product index
-    Products!: Product[];
-
+    @Input() products: Product[] = []; // Input to receive products array
     constructor(public productService: ProductService) {}
 
     ngOnInit() {
-        this.productService.getProducts().subscribe((products: any) => {
-            this.Products = products;
-            console.log(this.Products);
+        this.productService.getProducts().subscribe((products: Product[]) => {
+            this.products = products;
+            console.log(this.products);
         });
     }
 
-
-
     // Optional: Method to check if the current product is available
     isCurrentProductAvailable(): boolean {
-        return this.currentIndex >= 0 && this.currentIndex < this.Products.length;
+        return this.currentIndex >= 0 && this.currentIndex < this.products.length;
     }
 
 

@@ -1,11 +1,11 @@
 <div class="product-list">
   <!-- Display the product based on the current index -->
   <div *ngIf="isCurrentProductAvailable()" class="product-item">
-    <img [attr.src]="Products[currentIndex]?.image" alt="{{ Products[currentIndex]?.titre }}">
-    <h2>{{ Products[currentIndex].titre }}</h2>
-    <p>{{ Products[currentIndex].description }}</p>
-    <p>Prix: {{ Products[currentIndex].prix }}</p>
-    <p>Catégorie: {{ Products[currentIndex].categorie }}</p>
-    <p>Stock: {{ Products[currentIndex].stock }}</p>
+    <img [attr.src]="products[currentIndex]?.image" alt="{{ products[currentIndex]?.titre }}" class="product-img">
+    <h2>{{ products[currentIndex].titre }}</h2>
+    <p>{{ products[currentIndex].description }}</p>
+    <p><span class="original-price">Ancien prix : {{ products[currentIndex].prix }} €</span>&nbsp;&nbsp;<span class="discount-percentage">-90%</span></p>
+    <p><span class="discounted-price">Nouveau prix : {{ (+products[currentIndex].prix * 0.1).toFixed(2) }} €</span></p>
+    <p>Stock: 3 seulement !</p>
   </div>
 </div>

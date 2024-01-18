@@ -1,8 +1,32 @@
-<div class="product-gallery">
-  <div class="arrow left-arrow" (click)="onPrevClick()">←</div>
+<div class="dashboard">
+  <div class="dashboard-tab">Home</div>
+  <div class="dashboard-tab">Qui sommes-nous ?</div>
+</div>
+
+<div class="center-content">
+  <div class="arrow left-arrow" (click)="onPrevClick()">
+    ←
+  </div>
 
   <!-- Pass the current index to the ProductComponent -->
-  <app-products [currentIndex]="currentIndex"></app-products>
+  <app-products [currentIndex]="currentIndex" [products]="products"></app-products>
 
-  <div class="arrow right-arrow" (click)="onNextClick()">→</div>
+  <div class="arrow right-arrow" (click)="onNextClick()">&#8594;</div>
+</div>
+
+<div class="filter-container">
+  <label for="category">Filtrer par catégorie:</label>
+  <select id="category" [(ngModel)]="selectedCategory" name="category">
+    <!-- Vous pouvez générer ces options dynamiquement en fonction de vos catégories de produits -->
+    <option value="Vêtements">Vêtements</option>
+    <option value="Accessoires">Accessoires</option>
+    <option value="Électronique">Électronique</option>
+    <option value="Électroménager">Électroménager</option>
+  </select>
+  <button (click)="filterProductsByCategory(selectedCategory)" [disabled]="!selectedCategory" class="apply-filter-button">Appliquer le filtre</button>
+</div>
+
+<!-- Bouton à droite de la page -->
+<div class="buy-button-container">
+  <button class="buy-button">Acheter immédiatement</button>
 </div>
