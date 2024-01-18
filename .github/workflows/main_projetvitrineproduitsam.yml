@@ -25,7 +25,7 @@ jobs:
         run: |
           ls
           cd frontend
-          pwd # to print the current working directory
+          pwd
 
       - name: npm install, build, and test
         run: |
