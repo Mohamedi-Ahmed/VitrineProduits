@@ -1,0 +1,8 @@
+<div class="product-gallery">
+  <div class="arrow left-arrow" (click)="onPrevClick()">←</div>
+
+  <!-- Pass the current index to the ProductComponent -->
+  <app-products [currentIndex]="currentIndex"></app-products>
+
+  <div class="arrow right-arrow" (click)="onNextClick()">→</div>
+</div>

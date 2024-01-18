@@ -1,0 +1,11 @@
+<div class="product-list">
+  <!-- Display the product based on the current index -->
+  <div *ngIf="isCurrentProductAvailable()" class="product-item">
+    <img [attr.src]="Products[currentIndex]?.image" alt="{{ Products[currentIndex]?.titre }}">
+    <h2>{{ Products[currentIndex].titre }}</h2>
+    <p>{{ Products[currentIndex].description }}</p>
+    <p>Prix: {{ Products[currentIndex].prix }}</p>
+    <p>Catégorie: {{ Products[currentIndex].categorie }}</p>
+    <p>Stock: {{ Products[currentIndex].stock }}</p>
+  </div>
+</div>
